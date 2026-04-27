@@ -1,0 +1,35 @@
+{
+  "name": "@openclaw/feishu-cli-bridge",
+  "version": "0.0.0-private",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "start": "node --import tsx src/main.ts",
+    "start:setup": "node --import tsx src/main.ts --setup-feishu --setup-only",
+    "start:rescan": "node --import tsx src/main.ts --rescan-feishu --setup-only",
+    "test": "vitest run src/cli-backend.test.ts src/codex-history.test.ts",
+    "bridge:setup": "node scripts/bridge-service.cjs setup",
+    "bridge:rescan": "node scripts/bridge-service.cjs rescan",
+    "bridge:quickstart": "node scripts/bridge-service.cjs quickstart",
+    "bridge:install": "node scripts/bridge-service.cjs install",
+    "bridge:start": "node scripts/bridge-service.cjs start",
+    "bridge:stop": "node scripts/bridge-service.cjs stop",
+    "bridge:remove": "node scripts/bridge-service.cjs remove",
+    "bridge:status": "node scripts/bridge-service.cjs status",
+    "service:install": "node scripts/bridge-service.cjs install",
+    "service:uninstall": "node scripts/bridge-service.cjs remove",
+    "service:install:legacy": "node scripts/install-windows-service.cjs",
+    "service:uninstall:legacy": "node scripts/uninstall-windows-service.cjs"
+  },
+  "dependencies": {
+    "@larksuiteoapi/node-sdk": "^1.60.0",
+    "express": "^5.2.1",
+    "node-windows": "^1.0.0-beta.8",
+    "qrcode-terminal": "^0.12.0"
+  },
+  "devDependencies": {
+    "@types/express": "^5.0.6",
+    "tsx": "^4.21.0",
+    "vitest": "^4.1.4"
+  }
+}

@@ -1,0 +1,10 @@
+node_modules/
+bridge-runtime.log
+bridge-runtime.err.log
+.feishu-cli-bridge-auth.json
+.feishu-cli-bridge-sessions.json
+.feishu-cli-bridge-sessions.json.bak.*
+daemon/
+.DS_Store
+Thumbs.db
+personal-api-secrets.local.json
